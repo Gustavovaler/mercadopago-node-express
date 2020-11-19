@@ -11,7 +11,8 @@
                 "test":{
                     "access_token":"TEST-6623451607855904-111502-83c610c2165674e9bba665cfb4aa6b0c-672708410",
                     "public_key":"TEST-37665094-ce7d-438d-8c87-cadff7489018"
-                }, "production":{
+                },
+                 "production":{
                     "access_token": "APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410",
                     "public_key":"APP_USR-c7c1c087-e6bb-41e6-a638-131b9bd80ed9",
                     "client_id": 6623451607855904,
@@ -37,6 +38,45 @@
                     "client_secret": "gnOc0piU6CAx7fko2Kdoovs4Hs65Do6o"
                 }
             }
+        },
+        {
+    
+                
+                    "id": 667363340,
+                    "nickname": "TESTHCY4DFB7",
+                    "password": "qatest3816",
+                    "site_status": "active",
+                    "email": "test_user_13461856@testuser.com",
+                    "credentials":{
+                        "test":{
+                            "access_token":"",
+                            "public_key":""
+                        }, "production":{
+                            "access_token": "",
+                            "public_key":"",
+                            "client_id":0,
+                            "client_secret": ""
+                        }
+                    }
+                },
+                {
+                    "id": 667366281,
+                    "nickname": "TESTLEILATUT",
+                    "password": "qatest2744",
+                    "site_status": "active",
+                    "email": "test_user_30747064@testuser.com",
+                    "credentials":{
+                        "test":{
+                            "access_token":"",
+                            "public_key":""
+                        }, "production":{
+                            "access_token": "",
+                            "public_key":"",
+                            "client_id":0,
+                            "client_secret": ""
+                        }
+                    }               
+            
         }
     ]
 }
