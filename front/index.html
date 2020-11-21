@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Mercadopago Node</title>
+    <style>
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="display-2">Detalle Producto</h2>
+        <div class="row" id="row">
+            <!--**************************************
+            <div class="col-md-6 offset-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Remera de mujer manga corta</h3>
+                    </div>
+                    <div class="card-body">
+                        <img src="assets/34.jpg" alt="Foto del producto" style="width: 100%;">
+                        <hr>
+                        <h4>Descripcion</h4>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima inventore facilis repellat impedit, quae voluptate harum voluptatum sint nulla quia libero reprehenderit, aliquam quo minus.
+                        </p>
+                        <hr>
+                        <h4>Precio $ 2500</h4>
+                        <div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+
+            <!--*****************************************************************-->
+        </div>
+
+    </div>
+    <script>
+        window.onload = function(){
+
+        const productos = [
+            {titulo: "Remera de dama", precio: 2600, imagen: "assets/34.jpg"},
+            {titulo: "Pantalon", precio: 2500, imagen: "assets/200.jpg"},
+            {titulo: "Blusa de dama", precio: 1600, imagen: "assets/34.jpg"},
+            {titulo: "Pantalon Jean", precio: 1200, imagen: "assets/122.jpg"}
+
+        ];
+
+        for (let i = 0; i < productos.length; i++) {  
+                
+            
+            const row = document.getElementById('row');
+            let col = document.createElement('div');
+            col.classList.add('col-md-4');
+            row.appendChild(col)
+                let card = document.createElement('div');
+                card.classList.add('card');
+                col.appendChild(card);
+
+                let cardHeader = document.createElement('div');
+                cardHeader.classList.add('card-header');
+                card.appendChild(cardHeader);
+                cardHeader.innerHTML = `<h3> ${productos[i].titulo} </h3>`
+
+                let cardBody = document.createElement('div');
+                cardBody.classList.add('card-body');
+                card.appendChild(cardBody);
+                cardBody.innerHTML = `<img src="${productos[i].imagen}">`
+                let priceBox = document.createElement('h4');
+                cardBody.appendChild(priceBox);               
+                priceBox.innerHTML = `Precio $ ${productos[i].precio}`;
+                priceBox.classList.add('mt-2');
+
+                let boton = document.createElement('button');
+                boton.classList.add('btn', 'btn-primary', 'btn-block');
+                cardBody.appendChild(boton);
+                boton.innerText = "Comprar ahora";
+        }
+
+
+        }
+
+
+    
+    </script>
+     
+    <!--<form action="http://localhost:3000/checkout" method="POST">
+                                <input type="hidden" name="title" value="Remera de mujer manga corta">
+                                <input type="hidden" name="price" value="2500">                                
+                                <input type="submit" value="Comprar ahora" class="btn btn-primary btn-block">
+                            </form>-->
+</body>
+</html>
